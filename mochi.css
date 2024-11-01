@@ -1,0 +1,194 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fef5f7;
+    color: #333;
+}
+
+/* Gaya untuk header */
+header {
+    background-color: #ffccd5;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff577f;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ff577f;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff9aa2;
+}
+
+/* Gaya untuk banner */
+.banner {
+    text-align: center;
+    padding: 60px 20px;
+    background: url('assets/image/banner.jpg.png') no-repeat center center/cover;
+    color: white;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.banner button {
+    padding: 10px 20px;
+    background-color: #ff577f;
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.banner button:hover {
+    background-color: #ff9aa2;
+}
+
+/* Gaya untuk menu */
+.menu {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff577f;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.item {
+    width: 200px;
+    border: 1px solid #ffccd5;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    transition: box-shadow 0.3s;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.item h3 {
+    font-size: 1.2em;
+    color: #ff577f;
+    margin: 10px 0;
+}
+
+.item p {
+    font-size: 1em;
+    color: #333;
+    padding: 10px 0;
+}
+
+.item:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk aside (promo) */
+aside {
+    background-color: #ffccd5;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+aside h2 {
+    color: #ff577f;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+aside p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Gaya untuk footer */
+footer {
+    background-color: #ffccd5;
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+footer a {
+    color: #ff577f;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+#promo {
+    background-color: #f9f9f9; /* Warna latar belakang yang cerah */
+    border: 1px solid #e0e0e0; /* Garis batas tipis */
+    border-radius: 8px; /* Sudut yang membulat */
+    padding: 20px; /* Ruang di dalam section */
+    text-align: center; /* Teks di tengah */
+    margin: 20px 0; /* Jarak atas dan bawah */
+}
+
+#promo h2 {
+    font-size: 24px; /* Ukuran font judul */
+    color: #f4a9a9; /* Warna merah untuk judul */
+    margin-bottom: 10px; /* Jarak di bawah judul */
+
+}
+
+#promo p {
+    font-size: 16px; /* Ukuran font paragraf */
+    color: #555; /* Warna abu-abu gelap untuk teks */
+    margin-bottom: 15px; /* Jarak di bawah paragraf */
+    font-family:Arial, Helvetica, sans-serif;
+    
+
+}
+
+#promo img {
+    width: 90px;
+    height:auto;
+}

@@ -1,0 +1,75 @@
+/* Gaya dasar untuk halaman */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container utama form */
+.order-container {
+    background-color: #f3c5c5;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul form */
+.order-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Label form */
+.order-container label {
+    font-weight: bold;
+    color: #000000;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input dan textarea form */
+.order-container input[type="text"],
+.order-container input[type="number"],
+.order-container input[type="email"],
+.order-container textarea,
+.order-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Textarea khusus */
+.order-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Tombol submit */
+.order-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #eb8e8e;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-container button:hover {
+    background-color: #c17e78;
+}

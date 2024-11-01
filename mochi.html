@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochi Taste</title>
+    <link rel="stylesheet" href="mochi.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Mochi Time</div>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#promo">Promo</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+            <h1>Every Bite, A Sweet Surprise!</h1>
+            <p>Pick Your Faves!</p>
+            <button onclick="openModal()">Order Now</button>
+
+            <div id="orderModal" style="display:none;">
+                <div class="modal-content">
+                    <span onclick="closeModal()" style="cursor:pointer;">&times;</span>
+                    <iframe src="order.html" width="100%" height="600px"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-container">
+                <article class="item">
+                    <img src="assets/image/coklat.jpg.jpeg" alt="Mochi Chocolate" />
+                    <h3>Mochi Coklat</h3>
+                    <p>Rp. 12.000</p>
+                </article>
+                <article class="item">
+                    <img src="assets/image/stroberi.jpg.jpeg" alt="Mochi Stroberi">
+                    <h3>Mochi Stroberi</h3>
+                    <p>Rp. 12.000</p>
+                </article>
+                <article class="item">
+                    <img src="assets/image/matcha.jpg.jpeg" alt="Mochi Matcha">
+                    <h3>Mochi Matcha</h3>
+                    <p>Rp. 12.000</p>
+                </article>
+                <article class="item">
+                    <img src="assets/image/mangga.jpg.jpeg" alt="Mochi Mangga">
+                    <h3>Mochi Mangga</h3>
+                    <p>Rp. 12.000</p>
+                </article>
+                <article class="item">
+                    <img src="assets/image/markisa.jpg.jpeg" alt="Mochi Markisa">
+                    <h3>Mochi Markisa</h3>
+                    <p>Rp. 12.000</p>
+                </article>
+                <article class="item">
+                    <img src="assets/image/oreo.jpg.jpeg" alt="Mochi Oreo">
+                    <h3>Mochi Oreo</h3>
+                    <p>Rp. 12.000</p>
+                </article>
+                <article class="item">
+                    <img src="assets/image/tiramisu.jpg.jpeg" alt="Mochi Tiramisu">
+                    <h3>Mochi Tiramisu</h3>
+                    <p>Rp. 12.000</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pindahkan elemen aside ke dalam main -->
+        <aside>
+            <h2>Special Promo</h2>
+            <p>Dapatkan diskon khusus untuk pembelian di atas Rp. 50.000 dapat mochi random</p>
+            <img src="/assets/image/mochi.jpeg" alt="banner" style="width: 150px; height: 130px; margin-top: 50px;">
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mochi Time. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:mochitime@gmail.com">contact@mochi.com</a></p>
+    </footer>
+
+    <style>
+        /* CSS untuk modal dan elemen lainnya */
+        #orderModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(253, 167, 167, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: rgb(234, 189, 189);
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+        }
+
+
+
