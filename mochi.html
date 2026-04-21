@@ -1,112 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mochi Taste</title>
+    <title>Mochi Time</title>
     <link rel="stylesheet" href="mochi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
-        <div class="logo">Mochi Time</div>
+        <div class="logo">🍡 Mochi Time</div>
         <nav>
             <ul>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#promo">Promo</a></li>
-                <li><a href="#locations">Locations</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Kontak</a></li>
             </ul>
         </nav>
+        <button class="btn-order-nav" onclick="openModal()">Order Now</button>
     </header>
 
-    <main>
-        <section class="banner">
-            <h1>Every Bite, A Sweet Surprise!</h1>
-            <p>Pick Your Faves!</p>
-            <button onclick="openModal()">Order Now</button>
+    <!-- HERO / BANNER -->
+    <section class="banner">
+        <h1>Every Bite, A Sweet Surprise!</h1>
+        <p>Mochi lembut dengan berbagai rasa pilihan, dikirim langsung ke tanganmu.</p>
+        <button class="btn-primary" onclick="openModal()">Pesan Sekarang</button>
+    </section>
 
-            <div id="orderModal" style="display:none;">
-                <div class="modal-content">
-                    <span onclick="closeModal()" style="cursor:pointer;">&times;</span>
-                    <iframe src="order.html" width="100%" height="600px"></iframe>
+    <!-- MENU -->
+    <section id="menu" class="menu">
+        <h2>Menu Kami</h2>
+        <p class="section-subtitle">Pilih rasa favoritmu!</p>
+        <div class="menu-container">
+            <article class="item">
+                <div class="item-img-wrap">
+                    <img src="assets/image/coklat.jpg.jpeg" alt="Mochi Coklat" />
                 </div>
-            </div>
-        </section>
-
-        <section id="menu" class="menu">
-            <h2>Our Menu</h2>
-            <div class="menu-container">
-                <article class="item">
-                    <img src="assets/image/coklat.jpg.jpeg" alt="Mochi Chocolate" />
+                <div class="item-info">
                     <h3>Mochi Coklat</h3>
-                    <p>Rp. 12.000</p>
-                </article>
-                <article class="item">
-                    <img src="assets/image/stroberi.jpg.jpeg" alt="Mochi Stroberi">
+                    <p class="price">Rp 12.000</p>
+                    <button class="btn-add" onclick="openModal('chocolate')">+ Pesan</button>
+                </div>
+            </article>
+            <article class="item">
+                <div class="item-img-wrap">
+                    <img src="assets/image/stroberi.jpg.jpeg" alt="Mochi Stroberi" />
+                </div>
+                <div class="item-info">
                     <h3>Mochi Stroberi</h3>
-                    <p>Rp. 12.000</p>
-                </article>
-                <article class="item">
-                    <img src="assets/image/matcha.jpg.jpeg" alt="Mochi Matcha">
+                    <p class="price">Rp 12.000</p>
+                    <button class="btn-add" onclick="openModal('strawberry')">+ Pesan</button>
+                </div>
+            </article>
+            <article class="item">
+                <div class="item-img-wrap">
+                    <img src="assets/image/matcha.jpg.jpeg" alt="Mochi Matcha" />
+                </div>
+                <div class="item-info">
                     <h3>Mochi Matcha</h3>
-                    <p>Rp. 12.000</p>
-                </article>
-                <article class="item">
-                    <img src="assets/image/mangga.jpg.jpeg" alt="Mochi Mangga">
+                    <p class="price">Rp 12.000</p>
+                    <button class="btn-add" onclick="openModal('matcha')">+ Pesan</button>
+                </div>
+            </article>
+            <article class="item">
+                <div class="item-img-wrap">
+                    <img src="assets/image/mangga.jpg.jpeg" alt="Mochi Mangga" />
+                </div>
+                <div class="item-info">
                     <h3>Mochi Mangga</h3>
-                    <p>Rp. 12.000</p>
-                </article>
-                <article class="item">
-                    <img src="assets/image/markisa.jpg.jpeg" alt="Mochi Markisa">
+                    <p class="price">Rp 12.000</p>
+                    <button class="btn-add" onclick="openModal('mango')">+ Pesan</button>
+                </div>
+            </article>
+            <article class="item">
+                <div class="item-img-wrap">
+                    <img src="assets/image/markisa.jpg.jpeg" alt="Mochi Markisa" />
+                </div>
+                <div class="item-info">
                     <h3>Mochi Markisa</h3>
-                    <p>Rp. 12.000</p>
-                </article>
-                <article class="item">
-                    <img src="assets/image/oreo.jpg.jpeg" alt="Mochi Oreo">
+                    <p class="price">Rp 12.000</p>
+                    <button class="btn-add" onclick="openModal('markisa')">+ Pesan</button>
+                </div>
+            </article>
+            <article class="item">
+                <div class="item-img-wrap">
+                    <img src="assets/image/oreo.jpg.jpeg" alt="Mochi Oreo" />
+                </div>
+                <div class="item-info">
                     <h3>Mochi Oreo</h3>
-                    <p>Rp. 12.000</p>
-                </article>
-                <article class="item">
-                    <img src="assets/image/tiramisu.jpg.jpeg" alt="Mochi Tiramisu">
+                    <p class="price">Rp 12.000</p>
+                    <button class="btn-add" onclick="openModal('oreo')">+ Pesan</button>
+                </div>
+            </article>
+            <article class="item">
+                <div class="item-img-wrap">
+                    <img src="assets/image/tiramisu.jpg.jpeg" alt="Mochi Tiramisu" />
+                </div>
+                <div class="item-info">
                     <h3>Mochi Tiramisu</h3>
-                    <p>Rp. 12.000</p>
-                </article>
+                    <p class="price">Rp 12.000</p>
+                    <button class="btn-add" onclick="openModal('tiramisu')">+ Pesan</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- PROMO -->
+    <section id="promo" class="promo">
+        <div class="promo-card">
+            <img src="assets/image/mochi.jpeg" alt="Promo Mochi" />
+            <div class="promo-text">
+                <span class="promo-badge">🎉 Promo Spesial</span>
+                <h2>Belanja di atas Rp 50.000?</h2>
+                <p>Kamu bakal dapet <strong>1 mochi random gratis</strong> sebagai bonus kejutan!</p>
+                <button class="btn-primary" onclick="openModal()">Klaim Sekarang</button>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Pindahkan elemen aside ke dalam main -->
-        <aside>
-            <h2>Special Promo</h2>
-            <p>Dapatkan diskon khusus untuk pembelian di atas Rp. 50.000 dapat mochi random</p>
-            <img src="/assets/image/mochi.jpeg" alt="banner" style="width: 150px; height: 130px; margin-top: 50px;">
-        </aside>
-    </main>
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <h2>Hubungi Kami</h2>
+        <p>Ada pertanyaan? Kami siap membantu!</p>
+        <div class="contact-links">
+            <a href="mailto:mochitime@gmail.com">📧 mochitime@gmail.com</a>
+            <a href="#">📍 Jakarta, Indonesia</a>
+            <a href="#">📱 Instagram @mochitime</a>
+        </div>
+    </section>
 
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2024 Mochi Time. All rights reserved.</p>
-        <p>Contact us: <a href="mailto:mochitime@gmail.com">contact@mochi.com</a></p>
+        <p>🍡 <strong>Mochi Time</strong> &copy; 2024. All rights reserved.</p>
     </footer>
 
-    <style>
-        /* CSS untuk modal dan elemen lainnya */
-        #orderModal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(253, 167, 167, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background: rgb(234, 189, 189);
-            padding: 20px;
-            width: 80%;
-            max-width: 600px;
-            position: relative;
-        }
+    <!-- MODAL ORDER -->
+    <div id="orderModal" class="modal-overlay" style="display:none;" onclick="handleOverlayClick(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2>🍡 Order Mochi</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" placeholder="Nama lengkap kamu" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="email@kamu.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Alamat Pengiriman</label>
+                    <textarea id="address" name="address" placeholder="Tulis alamat lengkap..." required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mochi-flavor">Rasa Mochi</label>
+                        <select id="mochi-flavor" name="mochi-flavor" required>
+                            <option value="">-- Pilih Rasa --</option>
+                            <option value="chocolate">Coklat</option>
+                            <option value="strawberry">Stroberi</option>
+                            <option value="matcha">Matcha</option>
+                            <option value="mango">Mangga</option>
+                            <option value="markisa">Markisa</option>
+                            <option value="oreo">Oreo</option>
+                            <option value="tiramisu">Tiramisu</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Jumlah</label>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                    </div>
+                </div>
+                <div class="form-total">
+                    Total: <span id="totalPrice">Rp 12.000</span>
+                </div>
+                <button type="submit" class="btn-submit">Konfirmasi Pesanan</button>
+            </form>
+            <div id="orderSuccess" class="order-success" style="display:none;">
+                <div class="success-icon">✅</div>
+                <h3>Pesanan Berhasil!</h3>
+                <p>Terima kasih! Pesananmu sedang kami proses.</p>
+                <button class="btn-primary" onclick="closeModal()">Tutup</button>
+            </div>
+        </div>
+    </div>
 
-
-
+    <script src="mochi.js"></script>
+</body>
+</html>
